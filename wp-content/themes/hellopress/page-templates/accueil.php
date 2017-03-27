@@ -6,7 +6,7 @@ Template Name: Accueil
 get_header(); ?>
 
 <main>
-	<section class="row">
+	<section class="row header-accueil" style="background:url(<?php $imageData = wp_get_attachment_image_src(get_post_thumbnail_id ( 4 ), 'fp-xlarge'); echo $imageData[0];?>); background-size:cover; background-repeat:no-repeat;">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>

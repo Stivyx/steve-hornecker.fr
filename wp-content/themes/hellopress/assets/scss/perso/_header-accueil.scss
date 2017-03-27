@@ -1,0 +1,15 @@
+.header-accueil {
+    color: #fff;
+    padding: 70px 10px;
+
+    h1 {
+        font-size: rem-calc(30px);
+        text-transform: uppercase;
+    }
+    .separateur-titre {
+        width: rem-calc(200px);
+        background: $orange;
+        border: none;
+        height: 2px;
+    }
+}
