@@ -10,7 +10,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" class="header-accueil medium-12 text-center">
+<div id="post-<?php the_ID(); ?>" class="medium-12 text-center">
 		<h1><?php the_title(); ?></h1>
 		<hr class="separateur-titre" >
 		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
