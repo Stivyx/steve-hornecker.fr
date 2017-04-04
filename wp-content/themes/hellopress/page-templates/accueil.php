@@ -21,6 +21,8 @@ get_header(); ?>
 
 	</section>
 
+	<?php get_template_part( 'template-parts/portfolio-accueil'); ?>
+
 </main>
 
 <?php get_footer();
