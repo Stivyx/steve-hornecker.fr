@@ -10,27 +10,44 @@
 
 ?>
 
-<section class="row expanded travaux-accueil">
+<section class="portfolio">
 
-	<?php $loop = new WP_Query( array( 'post_type' => 'travaux', 'posts_per_page' => 5, 'paged' => $paged) ); ?>
 
-	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'travaux', 'posts_per_page' => 5, 'paged' => $paged) ); ?>
 
-	<div class="image-travaux medium-6 column text-center" style="background:<?php the_field("couleur"); ?>">
-		<?php the_post_thumbnail( $size ); ?>
-	</div>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<article class="travaux-accueil">
+		<div class="image-travaux text-center" style="background:<?php the_field("couleur"); ?>">
+			<?php the_post_thumbnail( $size ); ?>
+		</div>
 
-	<div class="infos-travaux medium-6 column text-center">
-		<h3>
-			<?php the_title(); ?>
-		</h3>
+		<div class="infos-travaux text-center">
+			<h3>
+				<?php the_title(); ?>
+			</h3>
 
-		<?php the_content() ; ?>
-		
-	</div>
+			<hr class="separator" style="background:<?php the_field("couleur"); ?>">
+
+			<?php the_content() ; ?>
+
+			<?php 
+			// get raw date
+			$date = get_field('date', false, false);
+
+			// make date object
+			$date = new DateTime($date);
+			?>
+
 			
-	<?php endwhile ; ?>
 
 
+			<p class="details-projet"><span>Date :</span> <?php echo $date->format('j/m/Y'); ?> <span>- Type de projet :</span> <?php the_field("type"); ?></p>
+			
+		</div>
+	</article>
+<?php endwhile ; ?>
+
+	
 </section>
+
 

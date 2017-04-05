@@ -1,16 +1,47 @@
 .travaux-accueil {
+    display: flex;
+    flex-flow: wrap;
 
     .image-travaux {
+            flex: 0 0 100%;
         padding: 0;
     }
     .infos-travaux {
+        flex: 0 0 100%;
         padding: 20px 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
 
+        hr.separator {
+            width: 200px;
+            height: 2px;
+            border: none;
+        }
         p {
             font-size: 18px;
+        }
+        .details-projet {
+            font-size: 15px;
+
+            span {
+                font-weight: 700;
+            }
         }
     }
     h3 {
         font-size: 25px;
     }
+    @media screen and (min-width: 960px) { 
+        &:nth-child(even) .image-travaux {
+            order: 1;
+        }
+        .image-travaux {
+            flex: 0 0 50%;
+        }
+        
+        .infos-travaux {
+            flex: 0 0 50%;
+        }
+     }
 }
