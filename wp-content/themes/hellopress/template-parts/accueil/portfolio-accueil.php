@@ -38,10 +38,7 @@
 			$date = new DateTime($date);
 			?>
 
-			
-
-
-			<p class="details-projet"><span>Date :</span> <?php echo $date->format('j/m/Y'); ?> <span>- Type de projet :</span> <?php the_field("type"); ?></p>
+			<p class="details-projet"><span>Date :</span> <?php echo $date->format('d/m/Y'); ?> <span>- Type de projet :</span> <?php the_field("type"); ?></p>
 			
 		</div>
 	</article>
