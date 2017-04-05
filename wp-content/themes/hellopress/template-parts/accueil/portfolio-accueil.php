@@ -13,7 +13,7 @@
 <section class="portfolio">
 
 
-<?php $loop = new WP_Query( array( 'post_type' => 'travaux', 'posts_per_page' => 5, 'paged' => $paged) ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'travaux', 'posts_per_page' => 5, 'paged' => $paged, "order" => "ASC") ); ?>
 
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	<article class="travaux-accueil">

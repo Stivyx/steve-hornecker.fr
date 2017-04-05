@@ -1,8 +1,11 @@
 // Couleurs
-$orange : #ff6600;
+$orange : #ff6600; 
+$gris-clair : #f7f7f7;
 
 // Typo
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Roboto:400,700');
-h1, h2, h3, h4, h5, h6 {
-    
-}
+
+
+@import "accueil/header-accueil";
+@import "accueil/travaux-accueil";
+@import "accueil/competences-accueil";

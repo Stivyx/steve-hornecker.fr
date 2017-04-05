@@ -1,0 +1,28 @@
+.section-competences-accueil {
+    background: $gris-clair;
+}
+.competences-accueil {
+    padding: 30px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+    figure {
+        margin-bottom: 30px;
+    }
+    .image-competences {
+        border-radius: 50%;
+        background: #fff;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        margin: 0 auto 10px;
+
+        img{
+            margin: auto;
+        }
+    }
+    h3 {
+        color: #696969;
+    }
+}
