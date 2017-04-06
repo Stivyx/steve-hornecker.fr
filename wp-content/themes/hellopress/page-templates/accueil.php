@@ -13,6 +13,10 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/accueil/competences-accueil'); ?>
 
+	<?php get_template_part( 'template-parts/accueil/propos-accueil'); ?>
+
+	<?php get_template_part( 'template-parts/accueil/formulaire-accueil'); ?>
+
 </main>
 
 <?php get_footer();
