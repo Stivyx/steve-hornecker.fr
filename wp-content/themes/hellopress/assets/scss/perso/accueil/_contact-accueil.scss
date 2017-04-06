@@ -1,3 +1,61 @@
 .section-contact-accueil {
     padding: 60px 20px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+    span input, span textarea {
+        border: 1px solid $orange;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        color: $gris-fonce;
+        background: none;
+    }
+    .part2 {
+        height: 168px;
+    }
+    span textarea {
+        margin-bottom: 30px;
+        color: $gris-fonce;
+        background: none;
+        height: 168px;
+    }
+    input[type="submit"]{
+        background: $orange;
+        color: $blanc;
+        padding: 15px 50px;
+        border: 1px solid $orange;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    span textarea:focus {
+        background: $blanc;
+    }
+    div.part1 p, div.part2 p {
+        position: relative;
+        margin-bottom: 2.5rem;
+
+        label{
+            position: absolute;
+            padding: 0 10px;
+            transition: all 0.4s;
+        }
+        span {
+            position: absolute;
+            top: -9px;
+            width: 100%;
+        }
+        label.transition {
+            transform: translateY(-32px);
+            z-index: 10;
+            transition: all 0.4s;
+            color: $orange;
+        }
+    }
 }
