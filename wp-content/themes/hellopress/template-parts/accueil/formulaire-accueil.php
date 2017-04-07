@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="section-contact-accueil">
+<section class="section-contact-accueil" style="background:url(<?php the_field("image_background_contact"); ?>); background-repeat:no-repeat; background-position: 50% 50%;">
 
 	<h2 class="text-center" >Contact</h2>
 

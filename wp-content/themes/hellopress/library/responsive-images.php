@@ -17,6 +17,8 @@ add_image_size( 'featured-large', 1440, 400, true );
 add_image_size( 'featured-xlarge', 1920, 400, true );
 add_image_size( 'competences', 70, 70, false );
 add_image_size( 'photo-profil', 285, 285, true );
+add_image_size( 'logo-menu', 114, 93, false );
+add_image_size( 'logo-footer', 70, 56, false );
 
 // Add additional image sizes
 add_image_size( 'fp-small', 640 );
@@ -33,6 +35,8 @@ function foundationpress_custom_sizes( $sizes ) {
 		'fp-xlarge'  => __( 'FP XLarge' ),
 		'competences'  => __( 'Compétences' ),
 		'photo-profil'  => __( 'Photo de profil' ),
+		'logo-menu'  => __( 'Logo du menu' ),
+		'logo-footer'  => __( 'Logo du footer' ),
 	) );
 }
 add_filter( 'image_size_names_choose', 'foundationpress_custom_sizes' );

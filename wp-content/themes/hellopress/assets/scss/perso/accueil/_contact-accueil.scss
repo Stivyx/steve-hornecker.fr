@@ -56,6 +56,9 @@
             z-index: 10;
             transition: all 0.4s;
             color: $orange;
+            &.transition-rempli {
+                color: $gris-fonce;
+            }
         }
     }
 }
