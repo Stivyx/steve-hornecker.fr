@@ -12,7 +12,7 @@
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section class="row section-propos-accueil">
+<section id="a-propos" class="row section-propos-accueil">
 
 	<h2 class="text-center" >À propos </h2>
 

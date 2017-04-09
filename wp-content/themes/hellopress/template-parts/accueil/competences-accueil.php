@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="section-competences-accueil">
+<section id="mes-competences" class="section-competences-accueil">
 
 <div class="competences-accueil text-center row small-up-2 large-up-4">
 	<h2 >

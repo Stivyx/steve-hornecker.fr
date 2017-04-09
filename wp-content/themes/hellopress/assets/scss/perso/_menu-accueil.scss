@@ -1,0 +1,44 @@
+#site-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .home a {
+        padding: 15px;
+        height: auto;
+        max-width: 100px;
+    }
+
+    &.top-bar .menu li a {
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 16px 12px;
+        }
+    &.top-bar .menu li:not(:last-child) {
+        border: none;     
+    }
+}
+#masthead .title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $gris-fonce;
+
+    .menu-icon {
+        order: 2;
+
+        &:after {
+            width: 0;
+        }
+    }
+    .title-bar-title {
+        flex: 1 1 80%;
+        text-align: left;
+    }
+    .title-bar-title a img {
+        padding: 15px;
+        height: auto;
+        max-width: 100px;
+        max-width: 89px;
+    }
+}

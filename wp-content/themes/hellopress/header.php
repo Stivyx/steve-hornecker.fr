@@ -29,16 +29,49 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="mobile-menu">
-			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
+			<button class="menu-icon" type="button" data-toggle="mobile-menu">
+
+				<?php 
+
+				$image = get_field('bouton_menu');
+				$size = 'logo-menu'; // (thumbnail, medium, large, full or custom size)
+
+				if( $image ) {
+					echo wp_get_attachment_image( $image, $size );
+				}
+				?>
+
+
+			</button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php 
+
+						$image = get_field('logo_menu');
+						$size = 'logo-menu'; // (thumbnail, medium, large, full or custom size)
+
+						if( $image ) {
+							echo wp_get_attachment_image( $image, $size );
+						}
+						?></a>
 			</div>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+					<li class="home">
+						
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php 
+
+						$image = get_field('logo_menu');
+						$size = 'logo-menu'; // (thumbnail, medium, large, full or custom size)
+
+						if( $image ) {
+							echo wp_get_attachment_image( $image, $size );
+						}
+						?></a>
+
+					</li>
 				</ul>
 			</div>
 			<div class="top-bar-right">
