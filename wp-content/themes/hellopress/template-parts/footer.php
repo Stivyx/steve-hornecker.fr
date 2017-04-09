@@ -9,16 +9,30 @@
  */
 
 ?>
-<section class="row text-center" >
+<section class="row text-center section-footer" >
 
-	<div class="medium-4 column">
-		COPYRIGHT © 2017
+
+
+	<div class="medium-5 column col-gauche">
+		COPYRIGHT © <?php echo date('Y'); ?>
 	</div>
-	<div class="medium-4 column">
-		<img src="<?php the_field("logo-footer"); ?>" alt="">
+	<div class="medium-2 column">
+		
+		<?php 
+
+		$image = get_field('Logo_footer');
+		$size = 'logo-footer'; // (thumbnail, medium, large, full or custom size)
+
+		if( $image ) {
+			echo wp_get_attachment_image( $image, $size );
+		}
+		?>
+		
 	</div>
-	<div class="medium-4 column">
+	<div class="medium-5 column">
 		TOUS DROITS RÉSERVÉS
 	</div>
+
+
 
 </section>

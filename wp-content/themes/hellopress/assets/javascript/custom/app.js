@@ -31,7 +31,7 @@ var smoothScroll = {
     setSpeed: function(e){
         var direction = e.detail ? -e.detail : e.wheelDelta;
     	this.speed += direction < 0 ? -this.scrollSpeed : this.scrollSpeed;
-    	if(this.timer == null){
+    	if(this.timer === null){
     		this.timer = setTimeout(this.smoothScroll, this.delay, this); 
     	}
     	e.preventDefault();
@@ -51,6 +51,6 @@ var smoothScroll = {
     		self.timer = setTimeout(self.smoothScroll, self.delay, self);
     	}
     }
-}
+};
 
 smoothScroll.init();
