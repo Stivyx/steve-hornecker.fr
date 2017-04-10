@@ -1,3 +1,4 @@
+//Effet de transition sur le label du formulaire
 $(function(){
     $(".section-contact-accueil input, .section-contact-accueil textarea").focus(function(){
         $(this).parent().prev().prev().addClass("transition");
@@ -54,3 +55,34 @@ var smoothScroll = {
 };
 
 smoothScroll.init();
+
+
+// Bouton pour remonter en haut
+$(document).ready( function () {
+    // Add return on top button
+    $('body').append('<div id="returnOnTop" title="Retour en haut">^</div>');
+    
+    // On button click, let's scroll up to top
+    $('#returnOnTop').click( function() {
+        $('html,body').animate({scrollTop: 0}, 'slow');
+    });
+});
+
+$(window).scroll(function() {
+    // If on top fade the bouton out, else fade it in
+    if ( $(window).scrollTop() == 0 )
+        $('#returnOnTop').fadeOut();
+    else
+        $('#returnOnTop').fadeIn();
+});
+
+
+//Ancre smooth
+	$(document).ready(function() {
+		$('.menu-item a, .header-accueil a').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 1000; // Durée de l'animation (en ms)
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			return false;
+		});
+	});
